@@ -7,6 +7,7 @@ Features
 - [Gulp](http://gulpjs.com/) for tasks
 - [Gulp-sass](https://github.com/dlmanning/gulp-sass) for compiling CSS
 - [Gulp-babel](https://github.com/babel/gulp-babel) for compiling ES6 to ES5
+- [Gulp-standard](https://github.com/emgeee/gulp-standard) for JS linting
 
 
 To Do
