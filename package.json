@@ -1,0 +1,12 @@
+{
+  "name": "front-end-template",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-standard": "^5.1.0"
+  }
+}
