@@ -3,7 +3,7 @@ var babel = require("gulp-babel");
 var livereload = require('gulp-livereload');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var standard = require('gulp-standard')
+var standard = require('gulp-standard');
 var sourcemaps = require('gulp-sourcemaps');
 
 var config = {
