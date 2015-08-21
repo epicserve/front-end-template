@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var standard = require('gulp-standard');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 
 var config = {
     boostrap_sass_dir: './bower_components/bootstrap-sass/assets/stylesheets',
@@ -23,7 +24,8 @@ gulp.task('standard', function () {
 gulp.task('js', ['standard'], function () {
   return gulp.src("src/js/**/*.js")
     .pipe(sourcemaps.init())
-    .pipe(babel())
+      .pipe(babel())
+      .pipe(uglify())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(config.static_js_dir))
     .pipe(livereload());
