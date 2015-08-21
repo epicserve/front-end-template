@@ -12,18 +12,22 @@ var config = {
     static_js_dir: './static/js'
 };
 
-gulp.task("js", function () {
+gulp.task('standard', function () {
+  return gulp.src(['src/js/**/*.js'])
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true
+    }))
+})
+
+gulp.task('js', ['standard'], function () {
   return gulp.src("src/js/**/*.js")
     .pipe(sourcemaps.init())
-    .pipe(standard())
-    // @TODO Fix the following so it doesn't break writting the js files to disk
-    // .pipe(standard.reporter('default', {
-    //   breakOnError: true
-    // }))
     .pipe(babel())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(config.static_js_dir))
     .pipe(livereload());
+
 });
 
 gulp.task('sass', function () {
