@@ -8,11 +8,11 @@ Features
 - [Gulp-sass](https://github.com/dlmanning/gulp-sass) for compiling CSS
 - [Gulp-babel](https://github.com/babel/gulp-babel) for compiling ES6 to ES5
 - [Gulp-standard](https://github.com/emgeee/gulp-standard) for JS linting
+- [Gulp-uglify](https://github.com/terinjokes/gulp-uglify) for minifing JS
 
 
 To Do
 -----
-- Add [gulp-uglify](https://github.com/terinjokes/gulp-uglify)
 - Add [browserify](https://github.com/substack/node-browserify)
 
 
