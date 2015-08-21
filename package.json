@@ -1,5 +1,10 @@
 {
   "name": "front-end-template",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/epicserve/front-end-template.git"
+  },
   "scripts": {
     "start": "node_modules/http-server/bin/http-server -p 8000"
   },
