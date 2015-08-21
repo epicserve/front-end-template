@@ -38,6 +38,6 @@ Usage
 4. Open a new terminal tab and then start the dev server
 
         $ cd ~/code/front-end-template
-        $ python -m SimpleHTTPServer
+        $ npm start
 
 5. Open your browser to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
