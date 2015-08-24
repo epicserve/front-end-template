@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var babel = require("gulp-babel");
+var browserify = require('browserify');
 var livereload = require('gulp-livereload');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var standard = require('gulp-standard');
 var sourcemaps = require('gulp-sourcemaps');
+var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
 
 var config = {
@@ -22,8 +24,15 @@ gulp.task('standard', function () {
 })
 
 gulp.task('js', ['standard'], function () {
+
+  var browserified = transform(function(filename) {
+    var b = browserify(filename);
+    return b.bundle();
+  });
+
   return gulp.src("src/js/**/*.js")
     .pipe(sourcemaps.init())
+      .pipe(browserified)
       .pipe(babel())
       .pipe(uglify())
     .pipe(sourcemaps.write("."))
